@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Post from "./Post";
+import "./index.css";
 const Home = () => {
   const [posts, setPosts] = useState([]);
 
@@ -15,7 +16,7 @@ const Home = () => {
   return (
     <>
       {posts.map((post) => {
-        <Post key={post._id} {...post} />;
+        return <Post key={post._id} {...post} />;
       })}
     </>
   );
