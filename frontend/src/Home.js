@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Post from "./Post";
 import "./index.css";
-import NavBar from "./NavBar";
 const Home = () => {
   return (
     <>
-      <NavBar />
+      <h1>Hi</h1>
     </>
   );
 };

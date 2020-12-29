@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./Home";
-import Test from "./Test";
 import { Button } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
