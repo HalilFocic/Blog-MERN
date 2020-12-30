@@ -1,0 +1,34 @@
+* {
+  font-family: "Roboto";
+}
+.about-project {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 3rem;
+  background: lemonchiffon;
+  color: rgb(167, 30, 167);
+  font-weight: bold;
+  padding: 3rem;
+  border-radius: 10px;
+}
+.about-header {
+  margin-top: 2rem;
+  border-bottom: 1px solid rgb(167, 30, 167);
+}
+body {
+  background-image: url("./test2.jpg");
+  background-size: cover;
+}
+.about-btn {
+  background: rgb(167, 30, 167);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+.about-btn:hover {
+  background: rgb(241, 107, 241);
+}
