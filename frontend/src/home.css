@@ -32,3 +32,8 @@ body {
 .about-btn:hover {
   background: rgb(241, 107, 241);
 }
+@media only screen and (max-width: 600px) {
+  .about-project {
+    width: 95%;
+  }
+}
