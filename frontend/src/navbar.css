@@ -1,17 +1,35 @@
+* {
+  font-family: "Roboto";
+}
 .nav-bar {
+  height: 3em;
   background: rgb(167, 30, 167);
   color: white;
   display: flex;
   justify-content: space-between;
+  padding-left: 0.8rem;
 }
 .nav-title {
   margin: auto 0 auto 2rem;
+  font-weight: bold;
 }
 .nav-list {
   display: flex;
   list-style-type: none;
+  height: 3rem;
 }
 .nav-list li {
   margin-top: auto;
   margin-bottom: auto;
+  text-align: center;
+}
+.nav-item {
+  height: 3rem;
+  padding-top: 0.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.nav-item:hover {
+  cursor: pointer;
+  background: rgb(241, 107, 241);
 }
