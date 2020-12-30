@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
+import NavBar from "./NavBar";
 const Home = () => {
   return (
     <>
-      <h1>Hi</h1>
+      <NavBar />
     </>
   );
 };

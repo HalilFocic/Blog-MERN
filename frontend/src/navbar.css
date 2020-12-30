@@ -1,0 +1,17 @@
+.nav-bar {
+  background: rgb(167, 30, 167);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-title {
+  margin: auto 0 auto 2rem;
+}
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+.nav-list li {
+  margin-top: auto;
+  margin-bottom: auto;
+}
