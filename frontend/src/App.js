@@ -6,19 +6,21 @@ import HeroInfo from "./HeroInfo";
 import PageNotFound from "./PageNotFound";
 import Navbar from "./Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import "./app.css";
 const App = () => {
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route exact path="/">
+          <Navbar />
           <Home />
         </Route>
         <Route exact path="/about">
+          <Navbar />
           <About />
         </Route>
         <Route exact path="/heroinfo">
+          <Navbar />
           <HeroInfo />
         </Route>
         <Route path="*">
