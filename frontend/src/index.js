@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./Home";
-import PostsPage from "./PostsPage";
-import { Button } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-ReactDOM.render(
-  <React.StrictMode>
-    <PostsPage />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+import About from "./About";
+import HeroInfo from "./HeroInfo";
+import PageNotFound from "./PageNotFound";
+import Navbar from "./Navbar";
+import App from "./App";
+ReactDOM.render(<App />, document.getElementById("root"));
