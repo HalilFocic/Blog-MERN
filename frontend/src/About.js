@@ -3,9 +3,18 @@ import "./About.css";
 import profilePicture from "./profilepicture.jpg";
 import { useGlobalContext } from "./context";
 import { HiLocationMarker } from "react-icons/hi";
+
+import axios from "axios";
+axios.defaults.headers.common = {
+  "Content-Type": "application/json"
+}
 const myName = "Halil Focic";
 const myArray = myName.split("");
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+};
 const About = () => {
   return (
     <div className="about-container">
@@ -28,7 +37,7 @@ const About = () => {
         </div>
       </div>
       <div className="about">
-        <div class="about-me">
+        <div className="about-me">
           <h1 style={{ marginBottom: "2rem", color: "royalblue" }}>About me</h1>
           <p>
             I am second year software engineering student. My interests are web
@@ -74,7 +83,7 @@ const About = () => {
             className="frm-input frm-textarea"
             style={{ resize: "none" }}
           ></textarea>
-          <button type="submit" className="btn-submit">
+          <button type="submit" className="btn-submit" onClick={handleSubmit}>
             Send Email
           </button>
         </form>

@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const parseJson = require('parse-json');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
@@ -18,6 +19,10 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
+app.post("/email", function (req, res) {
+  console.log(req.body);
+  res.json({ message: "Message recieved!" });
+});
 app.get("/", function (req, res) {
   res.send("HI");
 });
