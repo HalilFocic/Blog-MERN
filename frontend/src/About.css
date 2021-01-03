@@ -86,3 +86,40 @@
 .frm-textarea {
   height: 6rem;
 }
+@media only screen and (max-width: 1250px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .profile {
+    margin-bottom: 2rem;
+    display: none;
+  }
+  .profile-pic {
+    margin: auto;
+  }
+  .about {
+    width: 100%;
+    margin: 0;
+  }
+  .about h1 {
+    text-transform: uppercase;
+  }
+  .about-me p,
+  .about-project p {
+    font-size: 1.1rem;
+  }
+  .contact-me {
+    width: 100%;
+  }
+  .contact-me-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .frm-input {
+    width: 100%;
+  }
+  .btn-submit {
+    margin-bottom: 10rem;
+  }
+}
