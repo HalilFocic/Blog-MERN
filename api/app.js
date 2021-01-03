@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
-const parseJson = require('parse-json');
+const parseJson = require("parse-json");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const axios = require("axios");
 const Comment = require("./models/comment");
 const Post = require("./models/post");
+const sendMail = require("./mail");
 mongoose.set("useFindAndModify", false);
 mongoose.connect("mongodb://localhost/SuperHeroes", {
   useNewUrlParser: true,
