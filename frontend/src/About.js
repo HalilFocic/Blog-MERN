@@ -1,21 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import profilePicture from "./profilepicture.jpg";
 import { useGlobalContext } from "./context";
 import { HiLocationMarker } from "react-icons/hi";
 
 import axios from "axios";
-axios.defaults.headers.common = {
-  "Content-Type": "application/json"
-}
+
 const myName = "Halil Focic";
 const myArray = myName.split("");
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  
-};
 const About = () => {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [content, setContent] = useState("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let emailData = {
+      to: email,
+      subject,
+      content,
+    };
+    console.log(emailData);
+    let axiosConfig = {
+      headers: {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Access-Control-Allow-Origin": "*",
+      },
+    };
+    axios.post("/email", emailData, axiosConfig);
+  };
   return (
     <div className="about-container">
       <div className="profile">
@@ -70,11 +83,21 @@ const About = () => {
           <label htmlFor="email" className="frm-lbl">
             Email
           </label>
-          <input type="email" className="frm-input" />
+          <input
+            type="email"
+            className="frm-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <label htmlFor="subject" className="frm-lbl">
             Subject
           </label>
-          <input type="text" className="frm-input" />
+          <input
+            type="text"
+            className="frm-input"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
           <label htmlFor="emailText" className="frm-lbl">
             Enter your message
           </label>
@@ -82,6 +105,8 @@ const About = () => {
             width="50px"
             className="frm-input frm-textarea"
             style={{ resize: "none" }}
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
           ></textarea>
           <button type="submit" className="btn-submit" onClick={handleSubmit}>
             Send Email
