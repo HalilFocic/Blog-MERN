@@ -8,9 +8,7 @@
   box-sizing: border-box;
   font-family: "Audiowide", cursive;
 }
-body {
-  background: black;
-}
+
 .nav-title {
   margin: auto 0 auto 2rem;
   font-weight: bold;
