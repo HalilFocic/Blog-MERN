@@ -12,13 +12,13 @@ const myArray = myName.split("");
 const About = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
-  const [content, setContent] = useState("");
+  const [text, setText] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
     let emailData = {
-      to: email,
+      email,
       subject,
-      content,
+      text,
     };
     console.log(emailData);
     let axiosConfig = {
@@ -105,8 +105,8 @@ const About = () => {
             width="50px"
             className="frm-input frm-textarea"
             style={{ resize: "none" }}
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           ></textarea>
           <button type="submit" className="btn-submit" onClick={handleSubmit}>
             Send Email

@@ -8,6 +8,7 @@ const axios = require("axios");
 const Comment = require("./models/comment");
 const Post = require("./models/post");
 const sendMail = require("./mail");
+const SendmailTransport = require("nodemailer/lib/sendmail-transport");
 mongoose.set("useFindAndModify", false);
 mongoose.connect("mongodb://localhost/SuperHeroes", {
   useNewUrlParser: true,
@@ -23,8 +24,17 @@ app.use(methodOverride("_method"));
 
 app.post("/email", function (req, res) {
   console.log(req.body);
+  const { email, subject, text } = req.body;
+  sendMail(email, subject, text, function (err, msg) {
+    if (err) {
+      console.log("err");
+    } else {
+      console.log(msg);
+    }
+  });
   res.json({ message: "Message recieved!" });
 });
+
 app.get("/", function (req, res) {
   res.send("HI");
 });
