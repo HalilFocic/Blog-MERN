@@ -23,8 +23,22 @@
   border-radius: 10px;
 }
 .hero-info {
+  font-weight: bold;
   display: flex;
   justify-content: space-around;
+}
+.hero-item {
+  display: flex;
+}
+.blue-text {
+  color: royalblue;
+  margin-left: 0.3rem;
+  transition: 0.3s;
+}
+.blue-text:hover {
+  font-weight: bolder;
+  transform: translateY(-0.3rem) rotate(-5deg);
+  cursor: default;
 }
 .hero-submit {
   border: 0;
