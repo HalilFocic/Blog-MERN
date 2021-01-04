@@ -38,12 +38,43 @@ const HeroInfo = () => {
       ) : (
         <div className="hero-info">
           <div className="hero-appearance">
+            <img src={heroData.image.url} className="hero-picture"></img>
             <div className="hero-item">{heroData.appearance["gender"]}</div>
             <div className="hero-item">{heroData.appearance["race"]}</div>
             <div className="hero-item">{heroData.appearance["height"][1]}</div>
             <div className="hero-item">{heroData.appearance["weight"][1]}</div>
             <div className="hero-item">{heroData.appearance["hair-color"]}</div>
             <div className="hero-item">{heroData.appearance["eye-color"]}</div>
+          </div>
+          <div className="hero-stats">
+            <div className="hero-stat-row">
+              {heroData.powerstats["intelligence"]}
+            </div>
+            <div className="hero-stat-row">
+              {heroData.powerstats["strength"]}
+            </div>
+            <div className="hero-stat-row">{heroData.powerstats["speed"]}</div>
+            <div className="hero-stat-row">
+              {heroData.powerstats["durability"]}
+            </div>
+            <div className="hero-stat-row">{heroData.powerstats["power"]}</div>
+            <div className="hero-stat-row">{heroData.powerstats["combat"]}</div>
+          </div>
+          <div className="hero-aliases">
+            {heroData.biography.aliases.map((alias) => {
+              return <div className="alias">{alias}</div>;
+            })}
+            <div className="work-base">
+              <div>{heroData.work.occupation}</div>
+              <div>{heroData.work.base}</div>
+            </div>
+          </div>
+          <div className="hero-bio">
+            <div>{heroData.biography["full-name"]}</div>
+            <div>{heroData.biography["alter-egos"]}</div>
+            <div>{heroData.biography["place-of-birth"]}</div>
+            <div>{heroData.biography["first-appearance"]}</div>
+            <div>{heroData.biography["publisher"]}</div>
           </div>
         </div>
       )}

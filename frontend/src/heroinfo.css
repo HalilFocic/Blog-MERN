@@ -16,6 +16,12 @@
   border: 0;
   padding-left: 1rem;
 }
+.hero-picture {
+  width: 200px;
+}
+.hero-info {
+  display: flex;
+}
 .hero-submit {
   border: 0;
   padding: 0.5rem;
@@ -33,4 +39,15 @@
   background: black;
   color: white;
   cursor: pointer;
+}
+.hero-appearance,
+.hero-stats,
+.hero-aliases,
+.work-base,
+.hero-bio {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+  padding: 2rem;
+}
+.hero-stats {
+  width: 100px;
 }
