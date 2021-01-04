@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./heroinfo.css";
 import HeroAppearance from "./HeroAppearance";
+import HeroStats from "./HeroStats";
+import HeroBio from "./HeroBio";
 const HeroInfo = () => {
   const [hero, setHero] = useState("");
   const [heroData, setHeroData] = useState(null);
@@ -45,6 +47,7 @@ const HeroInfo = () => {
             />
           </div>
           <div className="hero-stats">
+            <HeroStats />
             <div className="hero-stat-row">
               {heroData.powerstats["intelligence"]}
             </div>
@@ -68,11 +71,7 @@ const HeroInfo = () => {
             </div>
           </div>
           <div className="hero-bio">
-            <div>{heroData.biography["full-name"]}</div>
-            <div>{heroData.biography["alter-egos"]}</div>
-            <div>{heroData.biography["place-of-birth"]}</div>
-            <div>{heroData.biography["first-appearance"]}</div>
-            <div>{heroData.biography["publisher"]}</div>
+            <HeroBio {...heroData.biography} />
           </div>
         </div>
       )}

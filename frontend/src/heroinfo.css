@@ -18,9 +18,13 @@
 }
 .hero-picture {
   width: 200px;
+  border: 3px solid royalblue;
+  background: royalblue;
+  border-radius: 10px;
 }
 .hero-info {
   display: flex;
+  justify-content: space-around;
 }
 .hero-submit {
   border: 0;
@@ -43,7 +47,6 @@
 .hero-appearance,
 .hero-stats,
 .hero-aliases,
-.work-base,
 .hero-bio {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
   padding: 2rem;
