@@ -43,11 +43,17 @@ app.get("/hero/:heroName", function (req, res) {
     .then(function (response) {
       console.log(response.data.results[0]);
       var hero = response.data.results[0];
+      if (
+        req.params.heroName.toLowerCase() === "superman" ||
+        req.params.heroName.toLowerCase() === "batman"
+      )
+        hero = response.data.results[1];
       res.json(hero);
     })
     .catch(function (error) {
-      console.log(error);
-      res.send("Error!");
+      res.send(
+        JSON.stringify({ error: "Looks like that hero was not found!" })
+      );
     })
     .then(function () {
       // always executed

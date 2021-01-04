@@ -1,0 +1,36 @@
+* {
+  font-family: "Roboto", cursive;
+}
+.hero-form-container {
+  margin-top: 1rem;
+  width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem;
+}
+.hero-form input {
+  height: 2rem;
+  width: 80%;
+  outline: none;
+  border: 0;
+  padding-left: 1rem;
+}
+.hero-submit {
+  border: 0;
+  padding: 0.5rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 2rem;
+  outline: none;
+  background: royalblue;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.hero-submit:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
