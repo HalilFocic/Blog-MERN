@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./heroinfo.css";
 const HeroInfo = () => {
   const [hero, setHero] = useState("");
-  const [heroData, setHeroData] = useState({});
+  const [heroData, setHeroData] = useState(null);
   const [error, setError] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -11,8 +11,8 @@ const HeroInfo = () => {
     if (data.error) {
       console.log("error");
     }
-    setHeroData(data);
     console.log(data);
+    setHeroData(data);
   };
   return (
     <>
@@ -33,8 +33,19 @@ const HeroInfo = () => {
         <div className="hero-not-found">
           Looks like that hero was not found!
         </div>
+      ) : !heroData ? (
+        <div className="search-hero">Please search a hero!</div>
       ) : (
-        <div className="hero-info">{heroData.name}</div>
+        <div className="hero-info">
+          <div className="hero-appearance">
+            <div className="hero-item">{heroData.appearance["gender"]}</div>
+            <div className="hero-item">{heroData.appearance["race"]}</div>
+            <div className="hero-item">{heroData.appearance["height"][1]}</div>
+            <div className="hero-item">{heroData.appearance["weight"][1]}</div>
+            <div className="hero-item">{heroData.appearance["hair-color"]}</div>
+            <div className="hero-item">{heroData.appearance["eye-color"]}</div>
+          </div>
+        </div>
       )}
     </>
   );
