@@ -34,7 +34,25 @@ app.post("/email", function (req, res) {
   });
   res.json({ message: "Message recieved!" });
 });
-
+app.get("/hero/:heroName", function (req, res) {
+  let link =
+    "https://superheroapi.com/api/3509433779090013/search/" +
+    req.params.heroName;
+  axios
+    .get(link)
+    .then(function (response) {
+      console.log(response.data.results[0]);
+      var hero = response.data.results[0];
+      res.json(hero);
+    })
+    .catch(function (error) {
+      console.log(error);
+      res.send("Error!");
+    })
+    .then(function () {
+      // always executed
+    });
+});
 app.get("/", function (req, res) {
   res.send("HI");
 });
