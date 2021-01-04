@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./heroinfo.css";
+import HeroAppearance from "./HeroAppearance";
 const HeroInfo = () => {
   const [hero, setHero] = useState("");
   const [heroData, setHeroData] = useState(null);
@@ -38,13 +39,10 @@ const HeroInfo = () => {
       ) : (
         <div className="hero-info">
           <div className="hero-appearance">
-            <img src={heroData.image.url} className="hero-picture"></img>
-            <div className="hero-item">{heroData.appearance["gender"]}</div>
-            <div className="hero-item">{heroData.appearance["race"]}</div>
-            <div className="hero-item">{heroData.appearance["height"][1]}</div>
-            <div className="hero-item">{heroData.appearance["weight"][1]}</div>
-            <div className="hero-item">{heroData.appearance["hair-color"]}</div>
-            <div className="hero-item">{heroData.appearance["eye-color"]}</div>
+            <HeroAppearance
+              {...heroData.appearance}
+              profile={heroData.image.url}
+            />
           </div>
           <div className="hero-stats">
             <div className="hero-stat-row">
