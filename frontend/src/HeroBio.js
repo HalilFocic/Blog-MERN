@@ -1,5 +1,8 @@
 import React from "react";
-
+// Hero biography
+// Add markers for place of birth
+// First appearance
+// Publisher
 const HeroBio = (hero) => {
   return (
     <>
