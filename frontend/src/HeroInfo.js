@@ -12,9 +12,10 @@ const HeroInfo = () => {
     const response = await fetch("/hero/" + hero);
     const data = await response.json();
     if (data.error) {
-      console.log("error");
+      setError(true);
+      return;
     }
-    console.log(data);
+    setError(false);
     setHeroData(data);
   };
   return (
@@ -47,19 +48,7 @@ const HeroInfo = () => {
             />
           </div>
           <div className="hero-stats">
-            <HeroStats />
-            <div className="hero-stat-row">
-              {heroData.powerstats["intelligence"]}
-            </div>
-            <div className="hero-stat-row">
-              {heroData.powerstats["strength"]}
-            </div>
-            <div className="hero-stat-row">{heroData.powerstats["speed"]}</div>
-            <div className="hero-stat-row">
-              {heroData.powerstats["durability"]}
-            </div>
-            <div className="hero-stat-row">{heroData.powerstats["power"]}</div>
-            <div className="hero-stat-row">{heroData.powerstats["combat"]}</div>
+            <HeroStats {...heroData.powerstats} />
           </div>
           <div className="hero-aliases">
             {heroData.biography.aliases.map((alias) => {
