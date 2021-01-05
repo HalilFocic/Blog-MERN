@@ -51,12 +51,16 @@ const HeroInfo = () => {
             <HeroStats {...heroData.powerstats} />
           </div>
           <div className="hero-aliases">
-            {heroData.biography.aliases.map((alias) => {
-              return <div className="alias">{alias}</div>;
-            })}
+            <h1>Aliases</h1>
+            <ul>
+              {heroData.biography.aliases.map((alias) => {
+                return <li className="alias">{alias}</li>;
+              })}
+            </ul>
             <div className="work-base">
+              <h1>Work</h1>
               <div>{heroData.work.occupation}</div>
-              <div>{heroData.work.base}</div>
+              <div>Location:{heroData.work.base}</div>
             </div>
           </div>
           <div className="hero-bio">

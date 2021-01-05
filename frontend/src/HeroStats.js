@@ -6,21 +6,21 @@ const HeroStats = (hero) => {
       <h1>STATS</h1>
       <div
         className="hero-stat-row"
-        style={{ width: `${3 * hero["intelligence"]}px` }}
+        style={{ width: `${0.9 * hero["intelligence"]}%` }}
       >
         <span>Intelligence</span>
         {hero["intelligence"]}
       </div>
       <div
         className="hero-stat-row"
-        style={{ width: `${3 * hero["strength"]}px` }}
+        style={{ width: `${0.9 * hero["strength"]}%` }}
       >
         <span>Strength</span>
         {hero["strength"]}
       </div>
       <div
         className="hero-stat-row"
-        style={{ width: `${3 * hero["speed"]}px` }}
+        style={{ width: `${0.9 * hero["speed"]}%` }}
       >
         <span>Speed</span>
 
@@ -28,7 +28,7 @@ const HeroStats = (hero) => {
       </div>
       <div
         className="hero-stat-row"
-        style={{ width: `${3 * hero["durability"]}px` }}
+        style={{ width: `${0.9 * hero["durability"]}%` }}
       >
         <span>Durability</span>
 
@@ -36,7 +36,7 @@ const HeroStats = (hero) => {
       </div>
       <div
         className="hero-stat-row"
-        style={{ width: `${3 * hero["power"]}px` }}
+        style={{ width: `${0.9 * hero["power"]}%` }}
       >
         <span>Power</span>
 
@@ -44,7 +44,7 @@ const HeroStats = (hero) => {
       </div>
       <div
         className="hero-stat-row"
-        style={{ width: `${3 * hero["combat"]}px` }}
+        style={{ width: `${0.9 * hero["combat"]}%` }}
       >
         <span>Combat</span>
 

@@ -97,6 +97,26 @@
   padding: 2rem;
   width: 25%;
 }
+.work-base {
+  margin-top: 2rem;
+}
+.work-base h1 {
+  margin-bottom: 1rem;
+}
+.alias {
+  margin-left: 1rem;
+  display: flex;
+  transition: 0.3s;
+}
+.alias ul {
+  display: flex;
+}
+.alias:hover {
+  color: royalblue;
+  cursor: pointer;
+  transform: scaleY(1.2) translateX(1rem);
+}
+
 .hero-stats {
   padding-top: 5rem;
   text-align: center;
