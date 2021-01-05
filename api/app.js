@@ -35,6 +35,9 @@ app.post("/email", function (req, res) {
   res.json({ message: "Message recieved!" });
 });
 // route for hero info page
+
+// To be added POST,edit,delete routes.
+// Log in & register forms
 app.get("/hero/:heroName", function (req, res) {
   let link =
     "https://superheroapi.com/api/3509433779090013/search/" +
