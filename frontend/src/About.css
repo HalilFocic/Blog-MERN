@@ -50,10 +50,13 @@
 .profile-icon {
   font-size: 2rem;
   color: #003d18;
+  transition: 0.3s;
 }
-.profile-text p {
-  padding-left: 1rem;
-  font-size: 20px;
+.profile-icon:hover {
+  transform: translateY(-0.3rem) rotate(-10deg);
+}
+.profile-row {
+  display: flex;
 }
 .technologies {
   background: #003d18;
