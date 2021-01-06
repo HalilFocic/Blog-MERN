@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./About.css";
 import profilePicture from "./profilepicture.jpg";
 import { useGlobalContext } from "./context";
-import { HiLocationMarker } from "react-icons/hi";
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import reactPic from "./images/react_green.png";
 import cssPic from "./images/css_green.png";
 import htmlPic from "./images/html_green.png";
@@ -48,11 +48,20 @@ const About = () => {
         </div>
         <div className="profile-text">
           <div className="green-rectangle"></div>
-          <p>
-            Hello there. I am a sofware engineering student at Faculty of
-            Information Techologies in Mostar. I’m in love with making sites
-            about things I am passionate about.
-          </p>
+          <div className="profile-row">Sotware Engineering Student</div>
+          <div className="profile-row">20</div>
+          <div className="profile-row">Mostar</div>
+          <div className="profile-row">
+            <a href="https://github.com/HalilFocic">
+              <AiFillGithub className="profile-icon" />
+            </a>
+            <a href="https://www.linkedin.com/feed/">
+              <AiFillLinkedin className="profile-icon" />
+            </a>
+            <a href="https://www.instagram.com/halil.focic/">
+              <AiFillInstagram className="profile-icon" />
+            </a>
+          </div>
           <div className="green-rectangle"></div>
         </div>
       </div>
@@ -60,15 +69,15 @@ const About = () => {
       <div className="technologies-container">
         <div className="techno-card">
           <div className="techno-title">Frontend</div>
-          <img src={htmlPic} alt="HTML Picture" className="tech-icon" />
-          <img src={cssPic} alt="CSS Picture" className="tech-icon" />
-          <img src={reactPic} alt="ReactPicture" className="tech-icon" />
+          <img src={htmlPic} alt="HTML " className="tech-icon" />
+          <img src={cssPic} alt="CSS " className="tech-icon" />
+          <img src={reactPic} alt="" className="tech-icon" />
         </div>
         <div className="techno-card">
           <div className="techno-title">Frontend</div>
-          <img src={nodePic} alt="HTML Picture" className="tech-icon" />
-          <img src={expressPic} alt="CSS Picture" className="tech-icon" />
-          <img src={mongoPic} alt="ReactPicture" className="tech-icon" />
+          <img src={nodePic} alt="Node " className="tech-icon" />
+          <img src={expressPic} alt="Express " className="tech-icon" />
+          <img src={mongoPic} alt="Mongo" className="tech-icon" />
         </div>
       </div>
       <div className="contact-me">
