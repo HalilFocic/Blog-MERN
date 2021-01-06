@@ -1,3 +1,6 @@
+* {
+  font-family: "Roboto";
+}
 .about-container {
   margin-top: 70px;
   width: 60%;
@@ -5,6 +8,81 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 3rem;
+}
+.my-name {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+.profile-main-info {
+  display: flex;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-between;
+}
+.picture-container {
+  width: 40%;
+  background: #003d18;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.green-rectangle {
+  background: #003d18;
+  width: 100%;
+  height: 30px;
+}
+.profile-text {
+  box-sizing: border-box;
+  width: 40%;
+}
+.profile-pic {
+  margin: auto;
+  width: 90%;
+}
+.profile-text p {
+  padding-left: 1rem;
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.technologies {
+  background: #003d18;
+  color: white;
+  margin-top: 2rem;
+  height: 80px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2rem;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding-top: 1.3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.technologies-container {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.techno-card {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  width: 35%;
+  height: 400px;
+  box-shadow: 2px 2px 15px rgb(163, 163, 163);
+}
+.techno-title {
+  padding: 0.5rem;
+  background: #003d18;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
 }
 .char-name {
   transition: 0.3s;
@@ -18,6 +96,7 @@
 }
 
 .contact-me {
+  margin-top: 4rem;
   background: #003d18;
   width: 100%;
   padding: 1.8rem 5% 1.8rem 5%;

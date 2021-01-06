@@ -31,7 +31,36 @@ const About = () => {
   };
   return (
     <div className="about-container">
-      <div className="profile-main-info"></div>
+      <h1 className="my-name">Halil Fočić</h1>
+      <div className="profile-main-info">
+        <div className="picture-container">
+          <img
+            className="profile-pic"
+            src={profilePicture}
+            alt="profile picutre"
+          />
+        </div>
+        <div className="profile-text">
+          <div className="green-rectangle"></div>
+          <p>
+            Hello there. I am a sofware engineering student at Faculty of
+            Information Techologies in Mostar. I’m in love with making sites
+            about things I am passionate about.
+          </p>
+          <div className="green-rectangle"></div>
+        </div>
+      </div>
+      <div className="technologies">Technologies</div>
+      <div className="technologies-container">
+        <div className="techno-card">
+          <div className="techno-title">Frontend</div>
+          IMG
+        </div>
+        <div className="techno-card">
+          <div className="techno-title">Frontend</div>
+          IMG
+        </div>
+      </div>
       <div className="contact-me">
         <form className="contact-me-form">
           <label htmlFor="email" className="frm-lbl">
