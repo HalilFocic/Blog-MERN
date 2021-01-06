@@ -2,6 +2,7 @@
   font-family: "Roboto";
 }
 .about-container {
+  box-shadow: 0 0 30px black;
   margin-top: 70px;
   width: 60%;
   background: white;
@@ -75,6 +76,11 @@
   width: 35%;
   height: 400px;
   box-shadow: 2px 2px 15px rgb(163, 163, 163);
+}
+.tech-icon {
+  height: 25%;
+  display: block;
+  margin: auto;
 }
 .techno-title {
   padding: 0.5rem;

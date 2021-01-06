@@ -3,6 +3,12 @@ import "./About.css";
 import profilePicture from "./profilepicture.jpg";
 import { useGlobalContext } from "./context";
 import { HiLocationMarker } from "react-icons/hi";
+import reactPic from "./images/react_green.png";
+import cssPic from "./images/css_green.png";
+import htmlPic from "./images/html_green.png";
+import expressPic from "./images/express_green.png";
+import nodePic from "./images/node_green.png";
+import mongoPic from "./images/mongo_green.png";
 
 import axios from "axios";
 
@@ -54,11 +60,15 @@ const About = () => {
       <div className="technologies-container">
         <div className="techno-card">
           <div className="techno-title">Frontend</div>
-          IMG
+          <img src={htmlPic} alt="HTML Picture" className="tech-icon" />
+          <img src={cssPic} alt="CSS Picture" className="tech-icon" />
+          <img src={reactPic} alt="ReactPicture" className="tech-icon" />
         </div>
         <div className="techno-card">
           <div className="techno-title">Frontend</div>
-          IMG
+          <img src={nodePic} alt="HTML Picture" className="tech-icon" />
+          <img src={expressPic} alt="CSS Picture" className="tech-icon" />
+          <img src={mongoPic} alt="ReactPicture" className="tech-icon" />
         </div>
       </div>
       <div className="contact-me">
