@@ -48,7 +48,7 @@ const About = () => {
         </div>
         <div className="profile-text">
           <div className="green-rectangle"></div>
-          <div className="profile-row">Sotware Engineering Student</div>
+          <div className="profile-row">Software Engineering Student</div>
           <div className="profile-row">20</div>
           <div className="profile-row">Mostar</div>
           <div className="profile-row">
@@ -74,7 +74,7 @@ const About = () => {
           <img src={reactPic} alt="" className="tech-icon" />
         </div>
         <div className="techno-card">
-          <div className="techno-title">Frontend</div>
+          <div className="techno-title">Backend</div>
           <img src={nodePic} alt="Node " className="tech-icon" />
           <img src={expressPic} alt="Express " className="tech-icon" />
           <img src={mongoPic} alt="Mongo" className="tech-icon" />
