@@ -59,45 +59,55 @@
   cursor: pointer;
 }
 .hero-info {
-  display: flex;
-  padding: 2rem;
+  background: white;
+  padding: 2rem 0rem 2rem 0rem;
+  width: 50%;
+  margin: auto;
 }
-
-.card-header {
+.hero-main {
+  box-sizing: border-box;
+  padding-left: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  width: 100%;
   background: #294477;
+  color: white;
+  font-weight: bolder;
   padding: 1rem;
-  border-top-right-radius: 16px;
-  border-top-left-radius: 16px;
+  box-sizing: border-box;
+}
+.hero-profile {
   text-align: center;
+}
+.title-aliases {
+  width: 55%;
+}
+.alias {
+  list-style-type: none;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #294477;
+}
+.aliases {
+  margin-top: 1rem;
+  text-align: right;
+}
+.hero-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.blue-row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 60px;
+  background: #294477;
+  width: 100%;
   color: white;
   font-weight: bolder;
   font-size: 2rem;
-  text-transform: uppercase;
-}
-.front-card {
-  background: #294477;
-  width: 300px;
-  height: 400px;
-  color: white;
-  border-radius: 20px;
-  padding: 0.5rem;
-}
-.back-card {
-  background: #294477;
-  width: 300px;
-  height: 400px;
-  padding-top: 40%;
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 2rem;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-}
-.hero-picture {
-  width: 70%;
-}
-.hero-profile {
-  margin-top: 1rem;
-  text-align: center;
 }

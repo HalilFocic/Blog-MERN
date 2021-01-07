@@ -43,7 +43,23 @@ const HeroInfo = () => {
       ) : !heroData ? (
         <div className="search-hero">Please search a hero!</div>
       ) : (
-        <section className="hero-info"></section>
+        <section className="hero-info">
+          <div className="hero-main">
+            <div className="hero-profile">
+              <img src={heroData.image.url} className="hero-photo" />
+            </div>
+            <div className="title-aliases">
+              <h1 className="title">{heroData.name}</h1>
+              <ul className="aliases">
+                {heroData.biography.aliases.map((alias, index) => {
+                  if (index > 2) return null;
+                  return <li class="alias">{alias}</li>;
+                })}
+              </ul>
+            </div>
+          </div>
+          <div className="blue-row"></div>
+        </section>
       )}
     </>
   );

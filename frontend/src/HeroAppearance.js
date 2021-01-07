@@ -3,7 +3,6 @@ const HeroAppearance = (data) => {
   console.log(data);
   return (
     <>
-      <img src={data.profile} alt="profile" className="hero-picture"></img>
       <div className="hero-item">
         Gender:<span className="blue-text">{data["gender"]}</span>
       </div>
