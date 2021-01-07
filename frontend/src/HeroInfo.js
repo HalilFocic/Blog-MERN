@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./heroinfo.css";
+import HeroProfile from "./HeroProfile";
 import HeroAppearance from "./HeroAppearance";
 import HeroStats from "./HeroStats";
 import HeroBio from "./HeroBio";
+import ReactCardFlip from "react-card-flip";
 const HeroInfo = () => {
+  const [profileCard, setProfileCard] = useState(false);
   const [hero, setHero] = useState("");
   const [heroData, setHeroData] = useState(null);
   const [error, setError] = useState(false);
@@ -40,33 +43,38 @@ const HeroInfo = () => {
       ) : !heroData ? (
         <div className="search-hero">Please search a hero!</div>
       ) : (
-        <div className="hero-info">
-          <div className="hero-appearance">
-            <HeroAppearance
-              {...heroData.appearance}
-              profile={heroData.image.url}
-            />
-          </div>
-          <div className="hero-stats">
-            <HeroStats {...heroData.powerstats} />
-          </div>
-          <div className="hero-aliases">
-            <h1>Aliases</h1>
-            <ul>
-              {heroData.biography.aliases.map((alias) => {
-                return <li className="alias">{alias}</li>;
-              })}
-            </ul>
-            <div className="work-base">
-              <h1>Work</h1>
-              <div>{heroData.work.occupation}</div>
-              <div>Location:{heroData.work.base}</div>
+        <section className="hero-info">
+          <ReactCardFlip isFlipped={profileCard} flipDirection="horizontal">
+            <div
+              className="back-card"
+              onClick={() => setProfileCard(!profileCard)}
+            >
+              PROFILE
             </div>
-          </div>
-          <div className="hero-bio">
-            <HeroBio {...heroData.biography} />
-          </div>
-        </div>
+
+            <div
+              className="front-card"
+              onClick={() => setProfileCard(!profileCard)}
+            >
+              <HeroProfile profile={heroData.image.url} name={heroData.name} />
+            </div>
+          </ReactCardFlip>
+          <ReactCardFlip isFlipped={profileCard} flipDirection="horizontal">
+            <div
+              className="back-card"
+              onClick={() => setProfileCard(!profileCard)}
+            >
+              PROFILE
+            </div>
+
+            <div
+              className="front-card"
+              onClick={() => setProfileCard(!profileCard)}
+            >
+              <HeroProfile profile={heroData.image.url} name={heroData.name} />
+            </div>
+          </ReactCardFlip>
+        </section>
       )}
     </>
   );

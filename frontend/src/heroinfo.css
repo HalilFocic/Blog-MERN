@@ -24,42 +24,9 @@
   margin-left: auto;
   margin-right: auto;
 }
-.hero-picture {
-  width: 200px;
-  border: 3px solid royalblue;
-  background: royalblue;
-  border-radius: 10px;
-}
-.hero-info {
-  font-weight: bold;
-  display: flex;
-}
-.hero-item {
-  display: flex;
-}
-.hero-stat-row {
-  background: royalblue;
-  color: white;
-  font-weight: bolder;
-  margin-top: 0.4rem;
-  padding: 0.3rem;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
-  transition: 0.3s;
-}
+
 .hero-stat-row:hover {
   box-shadow: none;
-}
-.blue-text {
-  color: royalblue;
-  margin-left: 0.3rem;
-  transition: 0.3s;
-}
-.blue-text:hover {
-  font-weight: bolder;
-  transform: translateY(-0.3rem) rotate(-5deg);
-  cursor: default;
 }
 .search-hero {
   text-align: center;
@@ -78,46 +45,55 @@
   border-bottom-right-radius: 10px;
   height: 2rem;
   outline: none;
-  background: royalblue;
+  background: #294477;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   transition: 0.3s;
 }
 .hero-submit:hover {
-  background: black;
-  color: white;
   cursor: pointer;
 }
-.hero-appearance,
-.hero-stats,
-.hero-aliases,
-.hero-bio {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.377);
+.hero-info {
+  display: flex;
   padding: 2rem;
-  width: 25%;
-}
-.work-base {
-  margin-top: 2rem;
-}
-.work-base h1 {
-  margin-bottom: 1rem;
-}
-.alias {
-  margin-left: 1rem;
-  display: flex;
-  transition: 0.3s;
-}
-.alias ul {
-  display: flex;
-}
-.alias:hover {
-  color: royalblue;
-  cursor: pointer;
-  transform: scaleY(1.2) translateX(1rem);
 }
 
-.hero-stats {
-  padding-top: 5rem;
+.card-header {
+  background: #294477;
+  padding: 1rem;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.front-card {
+  background: #294477;
+  width: 300px;
+  height: 400px;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+.back-card {
+  background: #294477;
+  width: 300px;
+  height: 400px;
+  padding-top: 40%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.hero-picture {
+  width: 70%;
+}
+.hero-profile {
+  margin-top: 1rem;
   text-align: center;
 }
