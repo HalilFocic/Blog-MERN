@@ -64,6 +64,7 @@ const HeroInfo = () => {
             profile={heroData.image.url}
           />
           <div className="blue-row">Combat statistics</div>
+          <HeroStats {...heroData.powerstats} />
         </section>
       )}
     </>

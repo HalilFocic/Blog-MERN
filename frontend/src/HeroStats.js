@@ -2,8 +2,7 @@ import React from "react";
 
 const HeroStats = (hero) => {
   return (
-    <>
-      <h1>STATS</h1>
+    <div className="hero-stats">
       <div
         className="hero-stat-row"
         style={{ width: `${0.9 * hero["intelligence"]}%` }}
@@ -50,7 +49,7 @@ const HeroStats = (hero) => {
 
         {hero["combat"]}
       </div>
-    </>
+    </div>
   );
 };
 
