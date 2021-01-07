@@ -58,7 +58,12 @@ const HeroInfo = () => {
               </ul>
             </div>
           </div>
-          <div className="blue-row"></div>
+          <div className="blue-row">Appearance</div>
+          <HeroAppearance
+            {...heroData.appearance}
+            profile={heroData.image.url}
+          />
+          <div className="blue-row">Combat statistics</div>
         </section>
       )}
     </>

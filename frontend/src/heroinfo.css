@@ -104,10 +104,31 @@
 .blue-row {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  height: 60px;
+  height: 40px;
   background: #294477;
   width: 100%;
   color: white;
   font-weight: bolder;
   font-size: 2rem;
+  text-align: center;
+  padding-top: 0.7rem;
+}
+.appearance {
+  display: flex;
+  text-align: center;
+}
+.appearance-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.appearance-title {
+  font-weight: bolder;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #294477;
+}
+.blue-text {
+  font-size: 1.6rem;
 }
