@@ -4,11 +4,18 @@ import HeroStats from "./HeroStats";
 const Biography = (bio) => {
   return (
     <div className="hero-bio">
-      <ul className="bio-list">
-        <li>Place of birth:{bio["place-of-birth"]}</li>
-        <li>First release:{bio["first-appearance"]}</li>
-        <li>Publisher:{bio["publisher"]}</li>
-      </ul>
+      <div className="base">
+        <div className="extra-blue">Place of birth</div>
+        {bio["place-of-birth"]}
+      </div>
+      <div className="base">
+        <div className="extra-blue">Publisher</div>
+        {bio["publisher"]}
+      </div>
+      <div className="base">
+        <div className="extra-blue">First appearance</div>
+        {bio["first-appearance"]}
+      </div>
     </div>
   );
 };
