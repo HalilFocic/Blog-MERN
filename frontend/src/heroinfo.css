@@ -2,7 +2,7 @@
   font-family: "Roboto", cursive;
 }
 .hero-form-container {
-  margin-top: 3rem;
+  margin-top: 5rem;
   width: 35rem;
   margin-left: auto;
   margin-right: auto;
@@ -10,7 +10,8 @@
   padding: 1rem;
 }
 .hero-form input {
-  height: 2rem;
+  height: 3rem;
+  font-size: 1.5rem;
   width: 80%;
   outline: none;
   border: 0;

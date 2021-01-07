@@ -43,38 +43,7 @@ const HeroInfo = () => {
       ) : !heroData ? (
         <div className="search-hero">Please search a hero!</div>
       ) : (
-        <section className="hero-info">
-          <ReactCardFlip isFlipped={profileCard} flipDirection="horizontal">
-            <div
-              className="back-card"
-              onClick={() => setProfileCard(!profileCard)}
-            >
-              PROFILE
-            </div>
-
-            <div
-              className="front-card"
-              onClick={() => setProfileCard(!profileCard)}
-            >
-              <HeroProfile profile={heroData.image.url} name={heroData.name} />
-            </div>
-          </ReactCardFlip>
-          <ReactCardFlip isFlipped={profileCard} flipDirection="horizontal">
-            <div
-              className="back-card"
-              onClick={() => setProfileCard(!profileCard)}
-            >
-              PROFILE
-            </div>
-
-            <div
-              className="front-card"
-              onClick={() => setProfileCard(!profileCard)}
-            >
-              <HeroProfile profile={heroData.image.url} name={heroData.name} />
-            </div>
-          </ReactCardFlip>
-        </section>
+        <section className="hero-info"></section>
       )}
     </>
   );
