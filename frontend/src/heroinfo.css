@@ -99,8 +99,8 @@
   border-radius: 50%;
 }
 .blue-row {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   height: 40px;
   background: #294477;
   width: 100%;
@@ -150,4 +150,34 @@
 .hero-stat-row:hover {
   box-shadow: none;
   transform: translateX(-0.2rem) translateY(-0.2rem);
+}
+.extra-blue {
+  background: #294477;
+  padding: 0.3rem;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+.extra-info {
+  display: flex;
+}
+.work-base {
+  padding-left: 1rem;
+  width: 50%;
+}
+.work,
+.base {
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.hero-bio {
+  text-align: right;
+}
+.hero-bio li {
+  list-style-type: none;
 }

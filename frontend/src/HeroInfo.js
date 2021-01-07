@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./heroinfo.css";
-import HeroProfile from "./HeroProfile";
 import HeroAppearance from "./HeroAppearance";
 import HeroStats from "./HeroStats";
-import HeroBio from "./HeroBio";
-import ReactCardFlip from "react-card-flip";
+import WorkBase from "./WorkBase";
+import Biography from "./Biography";
 const HeroInfo = () => {
   const [profileCard, setProfileCard] = useState(false);
   const [hero, setHero] = useState("");
@@ -65,6 +64,11 @@ const HeroInfo = () => {
           />
           <div className="blue-row">Combat statistics</div>
           <HeroStats {...heroData.powerstats} />
+          <div className="blue-row">Extra info</div>
+          <div className="extra-info">
+            <WorkBase {...heroData.work} />
+            <Biography {...heroData.biography} />
+          </div>
         </section>
       )}
     </>
