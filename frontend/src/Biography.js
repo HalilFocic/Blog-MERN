@@ -1,6 +1,4 @@
 import React from "react";
-import HeroStats from "./HeroStats";
-
 const Biography = (bio) => {
   return (
     <div className="hero-bio">
