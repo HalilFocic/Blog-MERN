@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-
+import PostFeed from "./PostFeed";
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
@@ -12,11 +12,11 @@ const Home = () => {
   };
   useEffect(() => {
     fetchPosts();
-  });
+  }, []);
   return (
     <>
       <div className="home-container">
-        {loading ? <h1>Loading...</h1> : <h1>Posts</h1>}
+        {loading ? <h3>Loading...</h3> : <PostFeed posts={posts} />}
       </div>
     </>
   );
