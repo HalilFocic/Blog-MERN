@@ -16,7 +16,15 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-        {loading ? <h3>Loading...</h3> : <PostFeed posts={posts} />}
+        {loading ? (
+          <h3>Loading...</h3>
+        ) : (
+          <>
+            {" "}
+            <PostFeed posts={posts} />
+            <button className="new-post-btn">New post</button>
+          </>
+        )}
       </div>
     </>
   );

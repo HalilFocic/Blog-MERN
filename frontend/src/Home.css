@@ -72,3 +72,21 @@
   font-weight: bolder;
   color: #294477;
 }
+.new-post-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
+  background: #294477;
+  color: white;
+  font-weight: bolder;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.534);
+}
+.new-post-btn:hover {
+  box-shadow: none;
+}
