@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./app.css";
+import NewPost from "./NewPost";
 const App = () => {
   return (
     <Router>
@@ -22,6 +23,10 @@ const App = () => {
         <Route exact path="/heroinfo">
           <Navbar />
           <HeroInfo />
+        </Route>
+        <Route exact path="/new">
+          <Navbar />
+          <NewPost />
         </Route>
         <Route path="*">
           <PageNotFound />

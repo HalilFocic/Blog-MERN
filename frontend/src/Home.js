@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 import PostFeed from "./PostFeed";
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -22,7 +23,9 @@ const Home = () => {
           <>
             {" "}
             <PostFeed posts={posts} />
-            <button className="new-post-btn">New post</button>
+            <button className="new-post-btn">
+              <Link to="/new">New post</Link>
+            </button>
           </>
         )}
       </div>

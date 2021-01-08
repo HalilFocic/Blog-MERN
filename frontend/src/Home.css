@@ -40,13 +40,16 @@
   padding-left: 1rem;
   font-size: 1.1rem;
 }
+.post-content {
+  padding-bottom: 2rem;
+}
 .post,
 .post-title {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
 .post,
-.post-actions {
+.post-content {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }

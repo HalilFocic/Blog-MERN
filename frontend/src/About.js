@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./About.css";
 import profilePicture from "./profilepicture.jpg";
-import { useGlobalContext } from "./context";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import reactPic from "./images/react_green.png";
 import cssPic from "./images/css_green.png";

@@ -16,9 +16,6 @@ const PostFeed = ({ posts }) => {
             </header>
             <div className="post-author">{author}</div>
             <div className="post-content">{content}</div>
-            <div className="post-actions">
-              <FaComment className="action" />
-            </div>
           </section>
         );
       })}
