@@ -11,9 +11,6 @@ import mongoPic from "./images/mongo_green.png";
 
 import axios from "axios";
 
-const myName = "Halil Focic";
-const myArray = myName.split("");
-
 const About = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -25,7 +22,6 @@ const About = () => {
       subject,
       text,
     };
-    console.log(emailData);
     let axiosConfig = {
       headers: {
         "Content-Type": "application/json;charset=UTF-8",

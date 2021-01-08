@@ -1,6 +1,5 @@
 import React from "react";
-import { AiFillHeart, AiOutlinePlus } from "react-icons/ai";
-import { FaComment } from "react-icons/fa";
+import { AiOutlinePlus } from "react-icons/ai";
 const PostFeed = ({ posts }) => {
   console.log(posts);
 

@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./NewPost.css";
+import axios from "axios";
 const NewPost = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [author, setAuthor] = useState("");
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const tetst = { title, content, author };
-    console.log(tetst);
+    let newPost = { title, content, author };
+    let axiosConfig = {
+      headers: {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Access-Control-Allow-Origin": "*",
+      },
+    };
+    axios.post("/new", newPost, axiosConfig);
   };
   return (
     <form className="new-post-form">

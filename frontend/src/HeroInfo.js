@@ -5,7 +5,6 @@ import HeroStats from "./HeroStats";
 import WorkBase from "./WorkBase";
 import Biography from "./Biography";
 const HeroInfo = () => {
-  const [profileCard, setProfileCard] = useState(false);
   const [hero, setHero] = useState("");
   const [heroData, setHeroData] = useState(null);
   const [error, setError] = useState(false);
@@ -45,7 +44,7 @@ const HeroInfo = () => {
         <section className="hero-info">
           <div className="hero-main">
             <div className="hero-profile">
-              <img src={heroData.image.url} className="hero-photo" />
+              <img src={heroData.image.url} alt="hero" className="hero-photo" />
             </div>
             <div className="title-aliases">
               <h1 className="title">{heroData.name}</h1>

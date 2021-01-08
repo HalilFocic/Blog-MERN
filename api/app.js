@@ -34,9 +34,6 @@ app.post("/email", function (req, res) {
   });
   res.json({ message: "Message recieved!" });
 });
-// route for hero info page
-
-// To be added POST,edit,delete routes.
 // Log in & register forms
 app.get("/hero/:heroName", function (req, res) {
   let link =
@@ -62,6 +59,11 @@ app.get("/hero/:heroName", function (req, res) {
     .then(function () {
       // always executed
     });
+});
+app.post("/new", function (req, res) {
+  console.log(req.body);
+  //  const { email, subject, text } = req.body;
+  res.send(JSON.stringify({ status: 200 }));
 });
 app.get("/", function (req, res) {
   res.send("HI");
