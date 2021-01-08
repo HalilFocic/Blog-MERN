@@ -17,7 +17,6 @@
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5281);
 }
 .plus:hover {
-  font-weight: bolder;
   cursor: pointer;
 }
 .post-title {
