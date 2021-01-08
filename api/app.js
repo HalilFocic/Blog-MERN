@@ -61,9 +61,14 @@ app.get("/hero/:heroName", function (req, res) {
     });
 });
 app.post("/new", function (req, res) {
-  console.log(req.body);
-  //  const { email, subject, text } = req.body;
-  res.send(JSON.stringify({ status: 200 }));
+  Post.create(req.body, function (err, newPost) {
+    if (err) {
+      res.send(JSON.stringify({ status: 400 }));
+    } else {
+      console.log("NOICE");
+      res.send(JSON.stringify({ status: 200 }));
+    }
+  });
 });
 app.get("/", function (req, res) {
   res.send("HI");

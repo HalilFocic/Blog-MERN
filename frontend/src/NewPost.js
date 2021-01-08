@@ -7,6 +7,7 @@ const NewPost = () => {
   const [author, setAuthor] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (title === "" || author === "" || content === "") return;
     let newPost = { title, content, author };
     let axiosConfig = {
       headers: {

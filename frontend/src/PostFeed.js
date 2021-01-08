@@ -1,11 +1,16 @@
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
+const inverseArray = (posts) => {
+  let temp = [];
+  for (let i = posts.length - 1; i >= 0; i--) temp.push(posts[i]);
+  return temp;
+};
 const PostFeed = ({ posts }) => {
   console.log(posts);
-
+  const arrangedPosts = inverseArray(posts);
   return (
     <>
-      {posts.map((post) => {
+      {arrangedPosts.map((post) => {
         const { author, title, content } = post;
         return (
           <section className="post">
