@@ -1,5 +1,6 @@
 import React from "react";
-
+import { AiFillHeart, AiOutlinePlus } from "react-icons/ai";
+import { FaComment } from "react-icons/fa";
 const PostFeed = ({ posts }) => {
   console.log(posts);
 
@@ -9,10 +10,15 @@ const PostFeed = ({ posts }) => {
         const { author, title, content } = post;
         return (
           <section className="post">
-            <header className="post-title">{title}</header>
+            <header className="post-title">
+              {title}
+              <AiOutlinePlus className="plus" />
+            </header>
             <div className="post-author">{author}</div>
             <div className="post-content">{content}</div>
-            <div className="post-actions">LIKE COMMENT</div>
+            <div className="post-actions">
+              <FaComment className="action" />
+            </div>
           </section>
         );
       })}
