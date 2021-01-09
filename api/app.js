@@ -43,6 +43,26 @@ app.get("/post/:id", function (req, res) {
     }
   });
 });
+
+app.post("/comment/:id", function (req, res) {
+  Post.findById(req.params.id, function (err, foundPost) {
+    if (err) {
+      res.send(JSON.stringify({ error: err }));
+    } else {
+      Comment.create(req.body, function (err, newComment) {
+        if (err) {
+          res.send(JSON.stringify({ status: 400 }));
+        } else {
+          foundPost.reviews.push(newComment);
+          //foundPost.save();
+          console.log(foundPost.reviews);
+          res.send(JSON.stringify({ status: 200 }));
+        }
+      });
+    }
+  });
+});
+
 app.get("/hero/:heroName", function (req, res) {
   let link =
     "https://superheroapi.com/api/3509433779090013/search/" +

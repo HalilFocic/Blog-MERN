@@ -4,7 +4,7 @@ var postSchema = new mongoose.Schema({
   title: String,
   content: String,
   author: String,
-  revies: [
+  reviews: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Comment",
