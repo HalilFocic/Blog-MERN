@@ -177,3 +177,62 @@
   font-size: 0.9rem;
   font-weight: bold;
 }
+@media only screen and (max-width: 1080px) {
+  .hero-form-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+  }
+  .hero-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .hero-form input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-submit {
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .search-hero {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+  }
+  .hero-info {
+    width: 100%;
+    padding: 0;
+  }
+  .hero-main {
+    flex-direction: column;
+    padding: 0;
+  }
+  .title-aliases {
+    width: 100%;
+    margin: auto;
+    margin-top: 0.5rem;
+    text-align: center;
+    padding: 0;
+  }
+  .aliases {
+    text-align: center;
+  }
+  .alias {
+    font-size: 1.2rem;
+  }
+  .appearance {
+    display: inline;
+    text-align: center;
+  }
+  .appearance-item {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: 50%;
+  }
+}
