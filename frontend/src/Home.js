@@ -41,7 +41,17 @@ const Home = () => {
             </button>
           </>
         ) : (
-          <div className="no-posts">Looks like there are no posts</div>
+          <div className="no-posts">
+            Looks like there are no posts
+            <button className="new-post-btn">
+              <Link
+                to="/new"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                New post
+              </Link>
+            </button>
+          </div>
         )}
       </div>
     </>

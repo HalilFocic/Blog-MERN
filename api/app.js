@@ -20,22 +20,6 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-
-Post.remove({}, function (err, rm) {
-  if (err) {
-    console.log("Err");
-  } else {
-    console.log(rm);
-  }
-});
-
-Comment.remove({}, function (err, rm) {
-  if (err) {
-    console.log("Err");
-  } else {
-    console.log(rm);
-  }
-});
 app.post("/email", function (req, res) {
   console.log(req.body);
   const { email, subject, text } = req.body;
