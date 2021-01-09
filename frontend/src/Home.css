@@ -93,3 +93,6 @@
 .new-post-btn:hover {
   box-shadow: none;
 }
+.post-page-container {
+  margin-top: 100px;
+}

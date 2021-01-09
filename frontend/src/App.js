@@ -5,7 +5,7 @@ import HeroInfo from "./HeroInfo";
 import PageNotFound from "./PageNotFound";
 import Navbar from "./Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import Post from "./Post";
 import "./app.css";
 import NewPost from "./NewPost";
 const App = () => {
@@ -28,6 +28,15 @@ const App = () => {
           <Navbar />
           <NewPost />
         </Route>
+        <Route
+          path="/post/:id"
+          children={
+            <>
+              <Navbar />
+              <Post />
+            </>
+          }
+        ></Route>
         <Route path="*">
           <PageNotFound />
         </Route>

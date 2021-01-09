@@ -34,7 +34,15 @@ app.post("/email", function (req, res) {
   });
   res.json({ message: "Message recieved!" });
 });
-// Log in & register forms
+app.get("/post/:id", function (req, res) {
+  Post.findById(req.params.id, function (err, foundPost) {
+    if (err) {
+      res.send(JSON.stringify({ error: err }));
+    } else {
+      res.send(JSON.stringify(foundPost));
+    }
+  });
+});
 app.get("/hero/:heroName", function (req, res) {
   let link =
     "https://superheroapi.com/api/3509433779090013/search/" +

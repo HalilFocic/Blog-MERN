@@ -24,7 +24,12 @@ const Home = () => {
             {" "}
             <PostFeed posts={posts} />
             <button className="new-post-btn">
-              <Link to="/new">New post</Link>
+              <Link
+                to="/new"
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                New post
+              </Link>
             </button>
           </>
         )}
