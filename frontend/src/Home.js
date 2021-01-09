@@ -21,7 +21,15 @@ const Home = () => {
           <h3>Loading...</h3>
         ) : (
           <>
-            {" "}
+            <Link
+              to="/new"
+              style={{
+                textDecoration: "none",
+              }}
+              className="new-mobile"
+            >
+              New post
+            </Link>
             <PostFeed posts={posts} />
             <button className="new-post-btn">
               <Link

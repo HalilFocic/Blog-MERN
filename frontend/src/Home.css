@@ -143,7 +143,20 @@
 .plus {
   color: white;
 }
+.new-mobile {
+  display: none;
+}
 @media only screen and (max-width: 1080px) {
+  .new-mobile {
+    display: block;
+    background: black;
+    color: white;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 10px;
+  }
   .home-container {
     width: 100%;
     box-sizing: border-box;
