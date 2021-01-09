@@ -34,16 +34,20 @@ app.post("/email", function (req, res) {
   });
   res.json({ message: "Message recieved!" });
 });
-app.get("/post/:id", function (req, res) {
-  Post.findById(req.params.id, function (err, foundPost) {
-    if (err) {
-      res.send(JSON.stringify({ error: err }));
-    } else {
-      res.send(JSON.stringify(foundPost));
-    }
-  });
+app.get("/post/:id", async function (req, res) {
+  // Post.findById(req.params.id, function (err, foundPost) {
+  //   if (err) {
+  //     res.send(JSON.stringify({ error: err }));
+  //   } else {
+  //     const responsePost = foundPost.populate("reviews");
+  //     console.log(responsePost);
+  //     res.send(JSON.stringify(foundPost));
+  //   }
+  // });
+  const post = await Post.findById(req.params.id).populate("reviews");
+  res.send(JSON.stringify(post));
 });
-
+app.get("/test/:id", async function (req, res) {});
 app.post("/comment/:id", function (req, res) {
   Post.findById(req.params.id, function (err, foundPost) {
     if (err) {
@@ -54,8 +58,7 @@ app.post("/comment/:id", function (req, res) {
           res.send(JSON.stringify({ status: 400 }));
         } else {
           foundPost.reviews.push(newComment);
-          //foundPost.save();
-          console.log(foundPost.reviews);
+          foundPost.save();
           res.send(JSON.stringify({ status: 200 }));
         }
       });
@@ -93,7 +96,6 @@ app.post("/new", function (req, res) {
     if (err) {
       res.send(JSON.stringify({ status: 400 }));
     } else {
-      console.log("NOICE");
       res.send(JSON.stringify({ status: 200 }));
     }
   });

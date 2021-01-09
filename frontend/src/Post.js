@@ -7,7 +7,7 @@ const Post = () => {
   const [post, setPost] = useState({});
   const [commentText, setCommentText] = useState("");
   const [commentAuthor, setCommentAuthor] = useState("");
-
+  const [reload, setReload] = useState(false);
   const postComment = async (e) => {
     e.preventDefault();
     let newComment = {
@@ -21,8 +21,15 @@ const Post = () => {
       },
     };
     axios.post("/comment/" + id, newComment, axiosConfig);
+    const response = await fetch("/post/" + id);
+    const data = await response.json();
+    const timer = setTimeout(() => {
+      console.log("This will run after 1 second!");
+    }, 300);
+    clearTimeout(timer);
     setCommentText("");
     setCommentAuthor("");
+    window.location.reload(false);
   };
   const loadPost = async () => {
     const response = await fetch("/post/" + id);
@@ -32,6 +39,7 @@ const Post = () => {
   };
   useEffect(() => {
     loadPost();
+    return () => {};
   }, []);
   return (
     <>
@@ -53,19 +61,16 @@ const Post = () => {
               >
                 Comments({post.reviews.length})
               </h2>
-              {console.log(post.reviews)}
-              <div className="comment">
-                <div className="comment-author">Author Test</div>
-                <div className="comment-content">
-                  This is some dummy text that goes into comment
-                </div>
-              </div>
-              <div className="comment">
-                <div className="comment-author">Author Test</div>
-                <div className="comment-content">
-                  This is some dummy text that goes into comment
-                </div>
-              </div>
+              {post.reviews.map((comment) => {
+                let { author, text } = comment;
+                return (
+                  <div className="comment" key={comment._id}>
+                    <div className="comment-author">{author}</div>
+                    <div className="comment-content">{text}</div>
+                  </div>
+                );
+              })}
+
               <div className="comment-post">
                 <form>
                   <input
