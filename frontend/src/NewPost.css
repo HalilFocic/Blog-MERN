@@ -58,3 +58,10 @@
   color: white;
   border: 0;
 }
+@media only screen and (max-width: 1080px) {
+  .new-post-form {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+}
