@@ -140,3 +140,17 @@
   margin-left: 1rem;
   cursor: pointer;
 }
+.plus {
+  color: white;
+}
+@media only screen and (max-width: 1080px) {
+  .home-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .post {
+    width: 85%;
+  }
+}
