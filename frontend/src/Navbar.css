@@ -51,31 +51,11 @@
   background: black;
 }
 
-/* 
-
-@media only screen and (max-width: 600px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  .nav-bar {
-    flex-direction: column;
-    padding-left: 0;
-    margin-left: 0;
-    height: initial;
-    text-align: left;
-  }
+@media only screen and (max-width: 1080px) {
   .nav-title {
-    font-size: 1.5rem;
+    display: none;
   }
   .nav-list {
-    flex-direction: column;
-    margin-bottom: 0;
-    height: initial;
+    margin: auto;
   }
-  .nav-item {
-    padding-left: 0.5rem;
-    border-top: 2px solid rgba(128, 0, 128, 0.411);
-    margin: 0;
-  }
-} */
+}

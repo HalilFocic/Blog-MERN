@@ -144,7 +144,7 @@
 .frm-textarea {
   height: 8rem;
 }
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1080px) {
   .about-container {
     flex-direction: column;
     width: 100%;
