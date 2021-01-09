@@ -147,10 +147,32 @@
 @media only screen and (max-width: 1250px) {
   .about-container {
     flex-direction: column;
+    width: 100%;
   }
-  .profile {
-    margin-bottom: 2rem;
+  .green-rectangle {
     display: none;
+  }
+  .profile-main-info {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .picture-container,
+  .profile-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .picture-container {
+    padding: 0;
+    background: white;
+  }
+  .profile-row {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    text-align: center;
   }
   .profile-pic {
     margin: auto;
@@ -162,10 +184,7 @@
   .about h1 {
     text-transform: uppercase;
   }
-  .about-me p,
-  .about-project p {
-    font-size: 1.1rem;
-  }
+
   .contact-me {
     width: 100%;
   }
