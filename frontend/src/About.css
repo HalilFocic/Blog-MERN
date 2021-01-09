@@ -192,11 +192,21 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    padding-bottom: 10rem;
   }
   .frm-input {
     width: 100%;
   }
   .btn-submit {
     margin-bottom: 10rem;
+  }
+  .technologies-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .techno-card {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
   }
 }
