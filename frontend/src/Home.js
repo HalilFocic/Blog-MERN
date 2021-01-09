@@ -19,7 +19,7 @@ const Home = () => {
       <div className="home-container">
         {loading ? (
           <h3>Loading...</h3>
-        ) : (
+        ) : posts.length > 0 ? (
           <>
             <Link
               to="/new"
@@ -40,6 +40,8 @@ const Home = () => {
               </Link>
             </button>
           </>
+        ) : (
+          <div className="no-posts">Looks like there are no posts</div>
         )}
       </div>
     </>

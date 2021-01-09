@@ -15,13 +15,27 @@ mongoose.connect("mongodb://localhost/SuperHeroes", {
   useUnifiedTopology: true,
 });
 
-// App setup
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
+Post.remove({}, function (err, rm) {
+  if (err) {
+    console.log("Err");
+  } else {
+    console.log(rm);
+  }
+});
+
+Comment.remove({}, function (err, rm) {
+  if (err) {
+    console.log("Err");
+  } else {
+    console.log(rm);
+  }
+});
 app.post("/email", function (req, res) {
   console.log(req.body);
   const { email, subject, text } = req.body;
@@ -35,15 +49,6 @@ app.post("/email", function (req, res) {
   res.json({ message: "Message recieved!" });
 });
 app.get("/post/:id", async function (req, res) {
-  // Post.findById(req.params.id, function (err, foundPost) {
-  //   if (err) {
-  //     res.send(JSON.stringify({ error: err }));
-  //   } else {
-  //     const responsePost = foundPost.populate("reviews");
-  //     console.log(responsePost);
-  //     res.send(JSON.stringify(foundPost));
-  //   }
-  // });
   const post = await Post.findById(req.params.id).populate("reviews");
   res.send(JSON.stringify(post));
 });
@@ -73,7 +78,6 @@ app.get("/hero/:heroName", function (req, res) {
   axios
     .get(link)
     .then(function (response) {
-      console.log(response.data.results[0]);
       var hero = response.data.results[0];
       if (
         req.params.heroName.toLowerCase() === "superman" ||
